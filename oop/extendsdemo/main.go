@@ -17,6 +17,10 @@ func (stu *Student)SetScore(score int)  {
 	stu.Score = score
 }
 
+func (stu *Student)getSum(n1 int, n2 int) int {
+	return n1 + n2
+}
+
 // 小学生
 type Pupil struct {
 	Student
@@ -44,11 +48,13 @@ func main() {
 	pupil.testing()
 	pupil.Student.SetScore(70)
 	pupil.Student.ShowInfo()
+	fmt.Println("res=",pupil.Student.getSum(1 ,2))
 
 	graduate := &Graduate{}
-	graduate.Student.Name = "mary~"
+	graduate.Name = "mary~"
 	graduate.Student.Age = 28
 	graduate.testing()
-	graduate.Student.SetScore(90)
+	graduate.SetScore(90)
 	graduate.Student.ShowInfo()
+	fmt.Println("res=", graduate.Student.getSum(1, 2))
 }

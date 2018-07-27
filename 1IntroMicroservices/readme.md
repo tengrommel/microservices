@@ -49,5 +49,23 @@
     - context
     - sso单点登录
 
-# net/http包
+# Introduction to Microservices
+First, we are going to look at how easy it is to create a simple web server with a single endpoint using the net/http package.
+
+net/http
 > The net/http package provides all the features we need to write HTTP clients and servers.
+
+It gives us the capability to send requests to other servers communicating using the HTTP protocol
+as well as the ability to run a HTTP server that can route requests to separate Go funcs, 
+serve static files, and much more.
+
+Reading and writing JSON
+> Thanks to the encoding /json package, which is built into the standard library encoding and decoding JSON to and from 
+Go types is both fast and easy.
+
+Marshalling Go structs to JSON
+> To encode JSON data, the encoding/json package provides the Marshal function, which has the following signature:
+    
+    func Marshal(v interface{}) ([]byte, error)
+
+
